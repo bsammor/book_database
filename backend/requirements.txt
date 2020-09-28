@@ -5,3 +5,4 @@ django-filter
 pillow
 django-jsonfield
 psycopg2-binary
+djangorestframework-simplejwt
