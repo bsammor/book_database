@@ -11,12 +11,15 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.parsers import JSONParser
 
 # Create your views here.
+
+
 @api_view(['GET'])
-#@permission_classes((IsAuthenticated, ))
+@permission_classes((IsAuthenticated, ))
 def recipes(request):
     recipes = Recipe.objects.all()
     serializer = RecipeSerializer(recipes, many=True)
     return Response(serializer.data)
+
 
 @api_view(['GET'])
 def recipe(request, pk):
@@ -27,8 +30,9 @@ def recipe(request, pk):
     except Recipe.DoesNotExist:
         return Response(status=404)
 
+
 @api_view(['POST'])
-#@permission_classes((IsAuthenticated, ))
+# @permission_classes((IsAuthenticated, ))
 def add(request):
     data = JSONParser().parse(request)
     serializer = RecipeSerializer(data=data)
