@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-REST_FRAMEWORK= {
+REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'recipes',
     'users',
+    'frontend',
 ]
 
 MIDDLEWARE = [
@@ -85,10 +86,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'jjlxvyyg',
-        'USER' : 'jjlxvyyg',
-        'PASSWORD' : 'fmcVDW6RhuFzvCKev_-JdeVTNGPmQ0X7',
-        'HOST' : 'rogue.db.elephantsql.com',
-        'PORT' : '5432'
+        'USER': 'jjlxvyyg',
+        'PASSWORD': 'fmcVDW6RhuFzvCKev_-JdeVTNGPmQ0X7',
+        'HOST': 'rogue.db.elephantsql.com',
+        'PORT': '5432'
     }
 }
 

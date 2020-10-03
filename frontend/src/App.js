@@ -1,14 +1,10 @@
 import React from "react";
-import logo from "./logo.svg";
-import ButtonAppBar from "./components/AppBar";
-import "./App.css";
+import Routes from "./routes";
 
 function App() {
   return (
     <div className="App">
-
-
-      <ButtonAppBar />
+      <Routes />
     </div>
   );
 }
