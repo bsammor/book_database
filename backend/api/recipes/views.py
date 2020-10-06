@@ -14,7 +14,7 @@ from rest_framework.parsers import JSONParser
 
 
 @api_view(['GET'])
-# @permission_classes((IsAuthenticated, ))
+@permission_classes((IsAuthenticated, ))
 def recipes(request):
     recipes = Recipe.objects.all()
     serializer = RecipeSerializer(recipes, many=True)

@@ -1,18 +1,16 @@
-import React from "react";
 import { Switch, Route } from "react-router-dom";
-import Login from "./views/Login";
-import Register from "./views/Register";
-import Books from "./views/Books";
-import Nav from "./layouts/Nav";
+import LoginView from "./views/LoginView";
+import RegisterView from "./views/RegisterView";
+import BooksView from "./views/BooksView";
+import React from "react";
 
-function Routes() {
+function Routes(props) {
   return (
     <>
-      <Nav />
       <Switch>
-        <Route path="/login" component={Login} />
-        <Route path="/register" component={Register} />
-        <Route path="/books" component={Books} />
+        <Route path="/login" component={LoginView} />
+        <Route path="/register" component={RegisterView} />
+        <Route path="/books" component={BooksView} />
       </Switch>
     </>
   );

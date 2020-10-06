@@ -8,4 +8,6 @@ urlpatterns = [
     path('auth/', jwt_views.TokenObtainPairView.as_view(),
          name='token_obtain_pair'),
     path('auth/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
+    path('auth/verify/', jwt_views.TokenVerifyView.as_view(), name='token_verify'),
+
 ]
